@@ -13,7 +13,7 @@ const DEFAULTS = {
   attributeName: "data-testid",
 };
 
-export default function reactDataTest({ types: t }) {
+export default function reactDataTestId({ types: t }) {
   return {
     name: "react-data-testid",
     visitor: {
