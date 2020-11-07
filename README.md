@@ -9,12 +9,12 @@ element of a rendered react component. The value is the name of the component.
 // This
 const MyAwesomeComponent = () => {
   return <div>Hello, world!</div>;
-}
+};
 
 // Becomes this
 const MyAwesomeComponent = () => {
   return <div data-testid="my-awesome-component">Hello, world!</div>;
-}
+};
 ```
 
 ## To use
@@ -23,9 +23,7 @@ Include the plugin in the plugins section of your .babelrc.
 
 ```json
 {
-  "plugins": [
-    "babel-plugin-react-data-testid"
-  ]
+  "plugins": ["babel-plugin-react-data-testid"]
 }
 ```
 

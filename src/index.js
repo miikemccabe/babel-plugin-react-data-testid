@@ -10,15 +10,16 @@ const kebabize = (str) => {
 };
 
 const DEFAULTS = {
-  attributeName: "data-testid"
-}
+  attributeName: "data-testid",
+};
 
 export default function reactDataTest({ types: t }) {
   return {
     name: "react-data-testid",
     visitor: {
       JSXElement(path, state) {
-        const attributeName = state.opts.attributeName || DEFAULTS.attributeName;
+        const attributeName =
+          state.opts.attributeName || DEFAULTS.attributeName;
         // Ignore child JSXElements or JSX who's parent is a Fragment
         if (path.parentPath.isJSXElement() || path.parentPath.isJSXFragment())
           return;

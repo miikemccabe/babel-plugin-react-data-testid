@@ -1,4 +1,3 @@
-import path from "path";
 import pluginTester from "babel-plugin-tester";
 
 import reactDataTestId from "../src";
@@ -29,7 +28,7 @@ pluginTester({
     {
       title: `The test id can be changed via config`,
       pluginOptions: {
-        attributeName: 'data-test'
+        attributeName: "data-test",
       },
       code: `const test = <div>Hello</div>;`,
       output: `const test = <div data-test="test">Hello</div>;`,
