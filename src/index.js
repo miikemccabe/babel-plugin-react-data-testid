@@ -15,7 +15,7 @@ const DEFAULTS = {
 
 export default function reactDataTest({ types: t }) {
   return {
-    name: "react-data-testid",
+    name: 'react-data-testid',
     visitor: {
       JSXElement(path, state) {
         const attributeName =
