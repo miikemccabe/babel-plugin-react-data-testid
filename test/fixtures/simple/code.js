@@ -9,7 +9,7 @@ const MyFunctionComponentWithReturn = () => {
 }
 
 const ExistingDataTest = () => {
-  return <div data-test="original">Hello</div>;
+  return <div data-testid="original">Hello</div>;
 }
 
 /**

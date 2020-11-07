@@ -1,7 +1,7 @@
 {
-  "name": "babel-plugin-react-data-test",
+  "name": "babel-plugin-react-data-testid",
   "version": "0.1.0",
-  "description": "Babel plugin for automatically adding data-test attributes to react components",
+  "description": "Babel plugin for automatically adding data-testid attributes to react components",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest test/",
@@ -11,7 +11,8 @@
     "babel",
     "react",
     "data-test",
-    "datatest",
+    "data-testid",
+    "react-testing-library",
     "jsx"
   ],
   "author": "Mike McCabe <mrmikemccabe@gmail.com>",

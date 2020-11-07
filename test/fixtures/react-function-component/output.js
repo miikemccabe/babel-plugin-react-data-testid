@@ -17,7 +17,7 @@ const Link = ({
   children,
 }) => (
   <a
-    data-test="link"
+    data-testid="link"
     style={style}
     className={className || [styles.link, ...additionalClasses].join(" ")}
     href={href}

@@ -1,6 +1,6 @@
-# babel-plugin-react-data-test
+# babel-plugin-react-data-testid
 
-A babel plugin for automatically including a data-test attribute on the parent
+A babel plugin for automatically including a `data-testid` attribute on the parent
 element of a rendered react component. The value is the name of the component.
 
 ## Example
@@ -13,7 +13,7 @@ const MyAwesomeComponent = () => {
 
 // Becomes this
 const MyAwesomeComponent = () => {
-  return <div data-test="my-awesome-component">Hello, world!</div>;
+  return <div data-testid="my-awesome-component">Hello, world!</div>;
 }
 ```
 
@@ -24,7 +24,7 @@ Include the plugin in the plugins section of your .babelrc.
 ```json
 {
   "plugins": [
-    "babel-plugin-react-data-test"
+    "babel-plugin-react-data-testid"
   ]
 }
 ```
