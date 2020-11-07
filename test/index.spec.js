@@ -22,6 +22,11 @@ pluginTester({
       output: `const test = <div data-testid="test">Hello</div>;`,
     },
     {
+      title: `Concatonates the data-testid if one already exists`,
+      code: `const test = <div data-testid="original">Hello</div>;`,
+      output: `const test = <div data-testid="test original">Hello</div>;`,
+    },
+    {
       title: `Adds a data-testid for arrow functions with explicit return`,
       fixture: "__fixtures__/arrow-function/implicit-return.js",
       outputFixture: "__fixtures__/arrow-function/implicit-return.output.js",
