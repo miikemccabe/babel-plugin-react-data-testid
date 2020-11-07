@@ -5,17 +5,29 @@ element of a rendered react component. The value is the name of the component.
 
 ## Example
 
-```javascript
-// This
-const MyAwesomeComponent = () => {
+#### Component
+```jsx
+export default MyAwesomeComponent = () => {
   return <div>Hello, world!</div>;
 };
-
-// Becomes this
-const MyAwesomeComponent = () => {
-  return <div data-testid="my-awesome-component">Hello, world!</div>;
-};
 ```
+
+#### In use
+```jsx
+<App>
+  <MyAwesomeCompent />
+</App>
+```
+
+#### Rendered output
+```html
+<div data-testid="my-awesome-component">Hello, world!</div>
+```
+
+### Fragments
+
+Components that are enclosed by a JSX Fragment are not affected because this can 
+change CSS specificity.
 
 ## To use
 
