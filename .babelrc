@@ -1,3 +1,6 @@
 {
-  "plugins": ["@babel/plugin-syntax-jsx", "@babel/plugin-syntax-flow"]
+  "plugins": [
+    "@babel/plugin-syntax-jsx",
+    ["@babel/plugin-transform-modules-commonjs", { "strictMode": false }]
+  ]
 }

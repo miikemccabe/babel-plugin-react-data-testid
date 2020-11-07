@@ -6,7 +6,7 @@ const kebabize = str => {
   }).join('');
 }
 
-module.exports = function reactDataTest({
+export default function reactDataTest({
   types: t
 }) {
   return {
