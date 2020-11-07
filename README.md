@@ -23,13 +23,24 @@ Include the plugin in the plugins section of your .babelrc.
 
 ```json
 {
-  "plugins": ["babel-plugin-react-data-testid"]
+  "plugins": [ "babel-plugin-react-data-testid" ]
 }
 ```
 
 If your project is written in Typescript you'll need to set the `jsx` option in
 `tsconfig.json` to `preserve` and have babel take care of transpiling your react
 code with `@babel/preset-react`.
+
+To change the attribute to something other than `data-testid` you can pass the
+`attributeName` option when you include the plugin:
+
+```json
+{
+  "plugins": [
+    [ "babel-plugin-react-data-testid", { "attributeName": "my-test-id" } ]
+  ]
+}
+```
 
 ## To build
 
