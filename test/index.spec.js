@@ -12,36 +12,47 @@ pluginTester({
   },
   tests: [
     {
-      title: `Doesn't change if there is no identifier`,
+      title: `Doesn't change if there is nothing exported`,
       code: `<div>Hello</div>;`,
+      snapshot: true
     },
     {
-      title: `Adds a data-testid with the value of the parent variable`,
-      code: `const test = <div>Hello</div>;`,
-      output: `const test = <div data-testid="test">Hello</div>;`,
+      title: `Doesn't change if the parent is a fragment`,
+      code: `export default test = <><div>Hello</div></>;`,
+      snapshot: true
+    },
+    {
+      title: `Adds a data-testid with the value of the default export variable name`,
+      code: `export default test = <div>Hello</div>;`,
+      snapshot: true
     },
     {
       title: `Concatonates the data-testid if one already exists`,
-      code: `const test = <div data-testid="original">Hello</div>;`,
-      output: `const test = <div data-testid="test original">Hello</div>;`,
+      code: `export default test = <div data-testid="original">Hello</div>;`,
+      snapshot: true
     },
     {
       title: `The test id can be changed via config`,
       pluginOptions: {
         attributeName: "data-test",
       },
-      code: `const test = <div>Hello</div>;`,
-      output: `const test = <div data-test="test">Hello</div>;`,
+      code: `export default test = <div>Hello</div>;`,
+      snapshot: true
     },
     {
       title: `Adds a data-testid for arrow functions with explicit return`,
       fixture: "__fixtures__/arrow-function/implicit-return.js",
-      outputFixture: "__fixtures__/arrow-function/implicit-return.output.js",
+      snapshot: true
     },
     {
       title: `Adds a data-testid for arrow functions with explicit return`,
       fixture: "__fixtures__/arrow-function/explicit-return.js",
-      outputFixture: "__fixtures__/arrow-function/explicit-return.output.js",
+      snapshot: true
+    },
+    {
+      title: `Doesn't add attribute to a nested map`,
+      fixture: "__fixtures__/arrow-function/with-nested-map.js",
+      snapshot: true
     },
   ],
 });
