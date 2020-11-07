@@ -27,6 +27,14 @@ pluginTester({
       output: `const test = <div data-testid="test original">Hello</div>;`,
     },
     {
+      title: `The test id can be changed via config`,
+      pluginOptions: {
+        attributeName: 'data-test'
+      },
+      code: `const test = <div>Hello</div>;`,
+      output: `const test = <div data-test="test">Hello</div>;`,
+    },
+    {
       title: `Adds a data-testid for arrow functions with explicit return`,
       fixture: "__fixtures__/arrow-function/implicit-return.js",
       outputFixture: "__fixtures__/arrow-function/implicit-return.output.js",
