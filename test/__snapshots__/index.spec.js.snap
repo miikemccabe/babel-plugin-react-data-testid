@@ -2,26 +2,42 @@
 
 exports[`react-data-testid Adds a data-testid for arrow functions with explicit return: Adds a data-testid for arrow functions with explicit return 1`] = `
 
-const MyComponent = () => <div>Hello</div>;
+export default MyComponent = () => <div>Hello</div>;
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const MyComponent = () => <div>Hello</div>;
+Object.defineProperty(exports, "__esModule", {
+  value: true,
+});
+exports.default = void 0;
+
+var _default = (MyComponent = () => (
+  <div data-testid="my-component">Hello</div>
+));
+
+exports.default = _default;
 
 
 `;
 
 exports[`react-data-testid Adds a data-testid for arrow functions with explicit return: Adds a data-testid for arrow functions with explicit return 2`] = `
 
-const MyComponent = () => {
+export default MyComponent = () => {
   return <div>Hello</div>;
 }
 
       ↓ ↓ ↓ ↓ ↓ ↓
 
-const MyComponent = () => {
-  return <div>Hello</div>;
-};
+Object.defineProperty(exports, "__esModule", {
+  value: true,
+});
+exports.default = void 0;
+
+var _default = (MyComponent = () => {
+  return <div data-testid="my-component">Hello</div>;
+});
+
+exports.default = _default;
 
 
 `;
@@ -37,7 +53,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = (test = <div>Hello</div>);
+var _default = (test = <div data-testid="test">Hello</div>);
 
 exports.default = _default;
 
@@ -55,7 +71,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = (test = <div data-testid="original">Hello</div>);
+var _default = (test = <div data-testid="test original">Hello</div>);
 
 exports.default = _default;
 
@@ -124,6 +140,34 @@ exports.default = _default;
 
 `;
 
+exports[`react-data-testid Doesn't affect non-react components: Doesn't affect non-react components 1`] = `
+
+export const reducer = (state = initialState, action) => {
+  return actionHandlers[action.type] ? actionHandlers[action.type](state, action.payload) : state;
+};
+
+export default reducer;
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+Object.defineProperty(exports, "__esModule", {
+  value: true,
+});
+exports.default = exports.reducer = void 0;
+
+const reducer = (state = initialState, action) => {
+  return actionHandlers[action.type]
+    ? actionHandlers[action.type](state, action.payload)
+    : state;
+};
+
+exports.reducer = reducer;
+var _default = reducer;
+exports.default = _default;
+
+
+`;
+
 exports[`react-data-testid Doesn't change if the parent is a fragment: Doesn't change if the parent is a fragment 1`] = `
 
 export default test = <><div>Hello</div></>;
@@ -168,7 +212,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = (test = <div>Hello</div>);
+var _default = (test = <div data-test="test">Hello</div>);
 
 exports.default = _default;
 

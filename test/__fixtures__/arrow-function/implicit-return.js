@@ -1,1 +1,1 @@
-const MyComponent = () => <div>Hello</div>;
+export default MyComponent = () => <div>Hello</div>;

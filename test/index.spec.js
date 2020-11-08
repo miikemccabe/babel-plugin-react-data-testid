@@ -19,12 +19,12 @@ pluginTester({
     {
       title: `Doesn't change if the parent is a fragment`,
       code: `export default test = <><div>Hello</div></>;`,
-      snapshot: true
+      snapshot: true,
     },
     {
       title: `Adds a data-testid with the value of the default export variable name`,
       code: `export default test = <div>Hello</div>;`,
-      snapshot: true
+      snapshot: true,
     },
     {
       title: `Concatonates the data-testid if one already exists`,
@@ -52,7 +52,12 @@ pluginTester({
     {
       title: `Doesn't add attribute to a nested map`,
       fixture: "__fixtures__/arrow-function/with-nested-map.js",
-      snapshot: true
+      snapshot: true,
+    },
+    {
+      title: `Doesn't affect non-react components`,
+      fixture: "__fixtures__/arrow-function/reducer.js",
+      snapshot: true,
     },
   ],
 });
